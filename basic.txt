@@ -1,0 +1,14 @@
+// What is class ?
+/* A class is a blueprint or template that defines an object properties and behavior */
+
+//What is Object ?
+/* An object is an instance of a class that contains actual value for the properties and can perform the behavior defined by the class */
+
+//What is public static void main(String args[])
+/* main method is public because jvm needs to access and call it from outside the class */
+/* main method is static because when main method run there is no object created. So how we can call a non-static method that's why main method is static so that jvm call the main method without an object */
+/* main method is void because jvm not expect that main method should return any value /*
+/* String args[] it is String because Command line argument are recive as a string and args[] because we can take multiple input at a time through command line */
+
+// How java program execute ?
+/* java code 1st compile through javac compiler and it convert into class file and that class file is executed by the JVM */
