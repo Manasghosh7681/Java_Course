@@ -12,3 +12,10 @@
 
 // How java program execute ?
 /* java code 1st compile through javac compiler and it convert into class file and that class file is executed by the JVM */
+
+//What is variable ?
+/* A variable is a memory location where a value is store and this value can be change */
+/* There are 3 types of variable
+1. Local variable :Variable which are declare inside the method is called local variable. it is access only inside the method where it is declare.
+2. Instance variable :Variable which are declare inside the class but outside the method is call Instance variable .It can be access anywhere inside the class .
+3. Static variable :Variable that are declare inside the class but outside method and it mark with static keyword. THis variable are belongs to the class. These are created only once and all the object are share it. It can be access anywhere inside the class .*/
