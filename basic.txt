@@ -32,12 +32,37 @@
 //What is Datatype ?
 /* Datatype defines what type of value can store a variable 
 There are 8 types of Datatype
-1.byte   | Size:1byte
-2.short  | Size:2byte
-3.int    | size:4byte
-4.long   | size:8byte
-5.float  | size:4byte
-6.double | size:8byte
-7.char   | size:1byte
-8.boolean
+1.byte   | Size:1byte |Default Value 0
+2.short  | Size:2byte |Default Value 0
+3.int    | size:4byte |Default Value 0
+4.long   | size:8byte |Default Value 0L
+5.float  | size:4byte |Default Value 0.0f
+6.double | size:8byte |Default Value 0.0d
+7.char   | size:1byte |Default Value '\u0000'
+8.boolean             |Default Value false
 */
+
+/*-------------------------------------Wrapper class-----------------------------------------------*/
+//What is wrapper class ?
+/* There are 2 types
+1.AutoBoxing :-The process of converting primitive Datatype to object is called Autoboxing.
+2.UnBoxing :-The process of converting object to primitive Datatype is called unboxing.
+primitive Datatype                        Object
+===================                     ===================
+byte                                    Byte
+short                                   Short
+int                                     Integer
+long                                    Long
+float                                   Float
+double                                  Double
+char                                    Character
+boolean                                 Boolean 
+Ex :-AutoBoxing
+int a=10;
+Integer obj=Integer.valueOf(a) 
+Integer obj2=a
+
+Ex :-UnBoxing
+int pri=obj
+*/
+
