@@ -13,6 +13,9 @@
 // How java program execute ?
 /* java code 1st compile through javac compiler and it convert into class file and that class file is executed by the JVM */
 
+
+/*-------------------------------------Variable--------------------------------------------------*/
+
 //What is variable ?
 /* A variable is a memory location where a value is store and this value can be change */
 /* There are 3 types of variable
@@ -20,5 +23,21 @@
 2. Instance variable :Variable which are declare inside the class but outside the method is call Instance variable .It can be access anywhere inside the class .
 3. Static variable :Variable that are declare inside the class but outside method and it mark with static keyword. THis variable are belongs to the class. These are created only once and all the object are share it. It can be access anywhere inside the class .*/
 
+/*-----------------------------------------Constant---------------------------------------------*/
+
 // What is constant ?
 /* A constant is a value that can not be changed once it is assigned. It is not necessary that at the declaration time value need to assign. But it is mandatory before use this it should be assign with some value. */
+
+/*-----------------------------------------Datatype----------------------------------------------*/
+//What is Datatype ?
+/* Datatype defines what type of value can store a variable 
+There are 8 types of Datatype
+1.byte   | Size:1byte
+2.short  | Size:2byte
+3.int    | size:4byte
+4.long   | size:8byte
+5.float  | size:4byte
+6.double | size:8byte
+7.char   | size:1byte
+8.boolean
+*/
