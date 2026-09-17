@@ -66,3 +66,13 @@ Ex :-UnBoxing
 int pri=obj
 */
 
+/*---------------------------------------Type Conversion---------------------------------------------*/
+/*There are 2 types
+1. widening :-converting smaller Datatype into higher Datatype.
+ex: int a=10;
+    long b=a;
+2. Narrowing :-converting higher Datatype into smaller Datatype.
+ex: float a=20.0f;
+    int b=(int)a;
+*/
+
