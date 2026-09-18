@@ -76,3 +76,14 @@ ex: float a=20.0f;
     int b=(int)a;
 */
 
+/*---------------------------------Operator------------------------------------------------*/
+/*An Operator is a symbol that is basically used to perform an operation. An operator is placed between two operand .
+1. Arithmetic Operator :(+,-,*,/,%)
+2. Relational Operator :(<,>,<=,>=,==,!=)
+3. logical Operator :(&&,||,!)
+4. Assignment Operator :(=,+=,-=,*=,/=,%=)
+5. Unary Operator :(++,--)
+6. Ternary Operator :(?:)
+7. Bitwise Operator : (&,|,>>,<<)
+*/
+
