@@ -94,3 +94,29 @@ ex: float a=20.0f;
 4.switch
 5.yield = Return a value to the case it is used in switch case.
  */
+
+ /*-----------------------------------Loops----------------------------------------------------*/
+ /* 1.while Loop
+ initialization counter
+ while(condition){
+    //execute if condition true
+     update counter
+ }
+
+
+ 2. For Loop
+ for(initialization,condition,counter){
+    //excute if condition satisfy
+ }
+ 3. do while Loop
+initialization counter
+ do{
+    //
+    update counter;
+ }while(condition);
+ 
+
+ 4. for-each loop : it is basically used for traverse in array
+ for(Datatype variable: arrayName){
+
+ }
