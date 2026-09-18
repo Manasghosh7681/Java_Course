@@ -87,3 +87,10 @@ ex: float a=20.0f;
 7. Bitwise Operator : (&,|,>>,<<)
 */
 
+/*-----------------------------------------Conditional Statement--------------------------------*/
+/*1.if
+2.if else
+3.if else if
+4.switch
+5.yield = Return a value to the case it is used in switch case.
+ */
