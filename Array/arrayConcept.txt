@@ -1,0 +1,14 @@
+/*---------------------------------------Array----------------------------------------------*/
+In Java array is an Object.
+It store similar kind of data.
+It size is fixed.
+It store in heap memory and the reference variable refer to the array object .
+
+Declaration
+=====================
+int arrayName[]=new int[size];
+
+intialization
+================
+arrayName[index]=value;
+
