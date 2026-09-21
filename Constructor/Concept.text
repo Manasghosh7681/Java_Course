@@ -1,0 +1,8 @@
+/*----------------------------------Constructor--------------------------------------------------*/
+Constructor is a special method whose name is same as class name. A constructor is call automatically when an object is create. Constructor does not have any return type.Constructor can not be abstract,static,final.Constructor Only have access modifier.
+There are 4 types of constructor
+
+1.default constructor :-if in a class there is no constructor that java automatically provide a default constructor.
+2. parameterized constructor :Constructor which takes parameter is called parameterized constructor.
+3. Non-parameterized Constructor : If a constructor have no parameter then it is called so.
+4. Copy constructor : THis constructor take an object as an parameter. It is used to copy an object.
