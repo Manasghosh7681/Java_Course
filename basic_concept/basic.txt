@@ -120,3 +120,37 @@ initialization counter
  for(Datatype variable: arrayName){
 
  }
+
+ /*--------------------------------------Methods---------------------------------------------*/
+ A function that is declared inside a class is called Method;
+
+Declaration
+-----------------
+access modifier(public,private,protected,default)
+return type (ex:-int,void,float,String,boolean)
+
+ex:- public void methodName(int x,int y){
+
+}
+
+Types of Method
+1. instance method 
+ex :- public void display(){
+
+}
+//This method is call through an object only
+2. static method
+public static void display(){
+
+}
+//This method is invoke using the class name. Inside the statis methosd we can not use instance property and method
+
+3. final Method
+public final void display(){
+
+}
+//if we make a method final then we can not override that method
+
+4. abstract method
+public abstract void display();
+// The method which have no body is called abstract method. It is present inside an abstract class or interface.
