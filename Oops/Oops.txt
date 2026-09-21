@@ -1,0 +1,106 @@
+/*----------------Object Oriented Programming-------------------------------*/
+1. Class :A class is a blueprint or template that defines an Object properties and behavior.
+example :
+Class vechile{
+    float speed;
+    String color;
+
+    public void start(){}
+    public void end(){}
+}
+
+2.Object : An object is a real world entity that holds the actual value for the properties and behavior.
+
+ex: vechile v1=new vechile();
+    v1.speed=190;
+    v1.color="Black";
+    v1.start();
+    v1.end();
+
+3. Encapsulation : Encapsulation is the process of wrapping data member and member function into a single unit and controll the access.
+
+ex: In Banking application we can directly update our kyc but not our balance.Here user has the access to update kyc and not direct access to update the balance. This process is called Encapsulation.
+
+class Bank{
+    String name;
+    private float balance=0;  //Here we can not direct access balance
+    public void updateName(String name){
+        this.name=name;
+    }
+    public void addBalance(float amount){  //Method to updateBalance
+        this.balance+=amount;  
+    }
+    public float getBalance(){    //method to getBalance
+        return this.balance;
+    }
+}
+public class Main{
+    public static void main(String args[]){
+        Bank b1=new Bank();
+        b1.updateName("Manas Ghosh");
+        System.out.println("Name :"+b1.name);
+        b1.addBalance(1000);
+        System.out.println("Balance :"+b1.getBalance());
+
+    }
+}
+
+4. Abstraction : Abstraction is the process of hiding complex things and showing the essential things to the user.
+
+Ex: In a tv remote we press on button and tv is on .But how it internally work we don't have any idea.
+
+5. Polymerphism :There are 2 types of Polymerphism.
+i.Run-time polymerphism :-It is achieve through method overriding.
+Method overriding is possible when parent class have same method signature as child class.
+class A{
+    public void show(){
+        System.out.println("A");
+    }
+}
+class B extends A{
+    @Override
+    public void show(){
+        System.out.println("B");
+    }
+    public static void main(String args[]){
+        B b1=new B();
+        b1.show();           //Output :B
+    }
+}
+
+ii. Compile-time polymerphism : It is achieve through method overloading .
+Method oveloading : It is possible when the same method name having different work means multiple method have same name but different parameter.
+class A{
+    public void add(int a){
+        int res=a+100;
+    }
+    public void add(int a,int b){
+        int res=a+b;
+    }
+    public void add(float a,float b,float c){
+        float res=a+b+c;
+    }
+}
+
+6. Inheritance:- It is the process of acquiring the properties and behavior of parent class through child class object.
+i.Single inheritance :-One child class extends one parent class.
+ii.multi-level inheritance :-One child class extends parent class and that parent class extends grandparent class.
+iii.hierarchical class : Multiple child class extends one parent class.
+
+Note: Java class does not support multiple inheritance due to the diamond problem. But java interface support multiple interface .
+
+Diamond problem :
+class A{
+    public void show(){
+        System.out.println('A');
+    }
+}
+class B{
+    public void show(){
+        System.out.println('B');
+    }
+}
+class C extends A,B{ //This gives error ambiguity which class show method call.
+
+}
+
