@@ -12,3 +12,25 @@ intialization
 ================
 arrayName[index]=value;
 
+Array methods
+====================
+it comes under 
+import java.util.Arrays;
+
+int arr[]={10,20,30,40};
+1.Arrays.toString(arr);
+System.out.println(Arrays.toString(arr));   //print the array
+
+2.Arrays.sort(arr)
+System.out.println(Arrays.sort(arr));       //Sort array in ascending order
+
+3.Arrays.binearySearch(arr,value);      //used to search an element
+
+4.Arrays.equals(a,b);           //used to check the 2 array contain same element
+5.Arrays.fill(arr,100);     //used to fill an array with same element
+6.Arrays.copyOf(arr,length)        //used to copy an array
+
+
+===================Properties=========================
+arr.length      //it gives the length of the array
+
