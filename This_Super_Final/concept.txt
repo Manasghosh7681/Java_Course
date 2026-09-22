@@ -1,0 +1,16 @@
+/*-----------------------------This keyword---------------------------------*/
+1-it basically reference the current class object
+2.It is used to access current class instance variable
+3.it is used to invoke current class method
+4.it is used to invoke current class constructor
+5.it can be passed as an argument
+
+/*-------------------------Super keyword-----------------------------------*/
+1.It is used to access parent class variable
+2.It is used to invoke parent class method
+3.It is used to invoke parent class constructor
+
+/*--------------------------Final Keyword----------------------------------*/
+1.If we make variable final then we can not change its value if it's assigned once.
+2.If we make a method final then we can not overide it.
+3.If we make a class final then we can not extend it.

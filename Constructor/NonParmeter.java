@@ -7,6 +7,6 @@ class xyz{
 
 public class NonParmeter {
     public static void main(String[] args) {
-        xyz x1=new xyz();
+        new xyz();
     }
 }
