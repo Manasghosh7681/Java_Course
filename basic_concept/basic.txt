@@ -154,3 +154,19 @@ public final void display(){
 4. abstract method
 public abstract void display();
 // The method which have no body is called abstract method. It is present inside an abstract class or interface.
+
+variable length argument
+==========================
+it allows a method to accept a variable number of arguments of the same Datatype.
+
+public void add(int ...a){
+    int res=0;
+    for(int arg:a){
+        res+=arg;
+    }
+    System.out.println(res);
+}
+add(1);
+add(1,2);
+add(1,2,3);
+add(1,2,3,4);
