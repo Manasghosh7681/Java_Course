@@ -1,0 +1,50 @@
+/*------------------------------------Abstraction-------------------------------------------*/
+A class is said to be abstract if it is marked with abstract keyword.
+Abstract class contain all the things what a class contain but it add on abstract method.
+we can't create an object of abstract class.
+ex:
+abstract class House{
+    int a=10;
+    static int  b=10;
+    final int  c=10;
+    final static int  d=10;
+    House(){
+        
+    }
+
+    public void concreteMethod(){
+
+    }
+
+    public static void staticMethod(){
+
+    }
+
+    abstract public void abstractMethod();
+}
+
+
+/*---------------------------------------------Interface-----------------------------------------*/
+Interface is the blueprint of a class. It provide a structure that class needs to implement.
+it contain abstract method,default method,private method,static method.
+By default all the method public and abstract.
+Variable inside is a constant means public,final and static
+
+interface Template{
+    public final static int a=10;
+    
+    abstract public void abstractMethod();
+
+    public static void staticMethod(){
+
+    }
+
+    default void defaultMethod(){
+
+    }
+
+    private void privateMethod()
+    {
+
+    }
+}
