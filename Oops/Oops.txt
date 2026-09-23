@@ -104,3 +104,64 @@ class C extends A,B{ //This gives error ambiguity which class show method call.
 
 }
 
+/*-------------------------------------------Upcasting---------------------------------------*/
+This is the process of converting child class reference to parent class reference.
+In this we can access only the parent class method. if any method is override in child class then in runtime it access the child class method.
+
+class Animal{
+    public void show(){
+        System.out.println("Animal");
+    }
+    public void eat(){
+        System.out.println("Animal eat");
+    }
+}
+class Dog extends Animal{
+    @Override
+    public void eat(){
+        System.out.println("Dog eat");
+    }
+    public void bark(){
+        System.out.println("Dog bark");
+    }
+}
+class Main{
+    public static void main(String args[]){
+        Animal a=new Dog();
+        a.show();   //Animal
+        a.eat();     //Dog eat
+    }
+}
+
+Downcasting
+===================
+It is the process of converting parent class reference into child class reference.
+class Animal{
+    public void show(){
+        System.out.println("Animal");
+    }
+    public void eat(){
+        System.out.println("Animal eat");
+    }
+}
+class Dog extends Animal{
+    public void eat(){
+        System.out.println("Dogs eat");
+    }
+    public void bark(){
+        System.out.println("Dogs bark");
+    }
+}
+class Main{
+    public static void main(String args[]){
+        Animal a=new Dog();     //Upcasting
+        a.show();    //Animal
+        a.eat();     //Dog eat
+
+        Dog d=(Dog) a;  //Dow casting Animal reference (a) is convert into Dog reference (d)
+        d.show();   //Animal
+        d.eat();    //Dog eat
+        d.bark();   //Dog bark
+    }
+}
+
