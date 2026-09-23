@@ -1,0 +1,107 @@
+/*-------------------------------------------Access Modifier---------------------------------------*/
+There are 4 types of modifier.
+1.private
+2.public
+3.protected
+4.default
+private
+=================
+It is access only inside the class
+
+public
+================
+It is access every where
+
+Protected 
+=================
+It is access inside the same class,inside the same package and also from subclasses in another package.
+
+default
+================
+it is access on the same package
+ex:
+package college;
+Student.java
+-----------------
+package college;
+class Student {
+
+    int marks = 90; 
+}
+class Main {
+    public static void main(String[] args) {
+
+        Student s = new Student();
+
+        System.out.println(s.marks); // Access here
+    }
+}
+
+package office;
+import college.student;
+class Main {
+    public static void main(String[] args) {
+
+        Student s = new Student();
+
+        System.out.println(s.marks); // we can not access here
+    }
+}
+
+/*----------------------------Packages------------------------------*/
+Package in java basically refers to the group of intefaces and classes;
+There are 2 types of Packages
+1.Built-in Packages
+ex:-java.lang
+java.util
+java.io
+java.sql
+
+2.User defined Packages
+this package are created by the user
+Creating a Package:
+==========================
+   package packageName;
+
+   Example:
+   package student;
+
+
+Using a Package:
+==========================
+   import packageName.ClassName;
+
+   Example:
+   import student.Student;
+
+
+Fully Qualified Name:
+=============================
+   Package name + Class name
+
+   Example:
+   student.Student
+
+   It can be used without an import statement.
+
+
+Package Naming Convention:
+===========================
+   Package names should generally be lowercase.
+
+   Example:
+   com.company.project
+   com.company.project.service
+   com.company.project.model
+
+Static Import:
+=========================
+   Used to import static members of a class.
+
+   import static java.lang.Math.PI;
+
+   Then:
+   System.out.println(PI);
+
+   Instead of:
+   System.out.println(Math.PI);
