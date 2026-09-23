@@ -1,0 +1,21 @@
+/*------------------------------------------String----------------------------------------------*/
+A string is a sequence of character that is enclosed with double quotes. it is also called string literal.
+char ch[]={'h','i','i'};
+String s= new String(ch);       //String object it create inside heap memory
+String s1="Hello";              //String literal it creates inside String pool means Heap->String Pool
+
+if we create identical string literal it points to the same memory location
+ex:
+String s2="Hello"
+ Here s1,s2 point to the same memory location in the string constant pool.
+
+System.out.println(s1==s2);         //true here compare the memory location not value
+
+if we create 
+String s3=new String("Hello");    //it creates inside heap memory and point another memory location.
+
+we can force this object to String pool
+String s3=new String("Hello").intern();
+
+/*-----------------------------------string method-------------------------------------*/
+1.length()
