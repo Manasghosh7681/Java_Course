@@ -1,0 +1,145 @@
+/*---------------------------------Exception----------------------------------------------*/
+
+---> Exception: An unexpected event that occurs during program execution.
+    It interrupts the normal flow of the program.
+
+---> Error: A serious problem that generally cannot be meaningfully handled
+    by the application, such as OutOfMemoryError and StackOverflowError.
+
+
+There are 2 types of Exception:
+
+1. Checked Exception (Compile-Time Checked Exception)
+   ---> These exceptions are checked by the compiler at compile time.
+   ---> We must either handle them using try-catch or declare them using throws.
+
+   Examples:
+   IOException
+   SQLException
+   FileNotFoundException
+   ClassNotFoundException
+
+
+2. Unchecked Exception (Runtime Exception)
+   ---> These exceptions are NOT checked by the compiler at compile time.
+   ---> They generally occur during program execution.
+   ---> They are subclasses of RuntimeException.
+
+   Examples:
+   ArithmeticException
+   ArrayIndexOutOfBoundsException
+   StringIndexOutOfBoundsException
+   NullPointerException
+   NumberFormatException
+
+
+How to Handle Exception
+=======================
+
+Exception can be handled using a try-catch block.
+
+Example:
+
+try {
+
+    // Code that may throw an exception
+
+}
+catch (Exception e) {
+
+    System.out.println(e.getMessage());
+
+}
+finally {
+
+    // Cleanup code
+
+}
+
+
+---> Inside the try block, we write the code that may throw an exception.
+
+---> Inside the catch block, we handle the exception.
+
+---> The finally block normally executes whether an exception occurs or not.
+    It is commonly used for cleanup code.
+
+
+Exception Propagation
+=====================
+
+---> Exception propagation means that if an exception occurs inside a
+    method and that method does not handle the exception, the exception
+    is passed to the caller method.
+
+---> Exception propagation can happen for both checked and unchecked
+    exceptions.
+
+---> For checked exceptions, the method must either handle the exception
+    or declare it using throws.
+
+---> For unchecked exceptions, the compiler does not require the method
+    to handle or declare the exception.
+
+
+Custom Exception
+================
+
+---> A custom exception is an exception created by the programmer
+    to represent a specific application problem or business rule.
+
+---> Custom exceptions can extend the built-in Exception class
+    for checked exceptions.
+
+    class MyException extends Exception {
+    }
+
+
+---> Custom exceptions can extend RuntimeException
+    for unchecked exceptions.
+
+    class MyException extends RuntimeException {
+    }
+
+
+---> For a checked exception, the compiler checks whether the exception
+    is handled or declared.
+
+    The exception itself occurs at runtime.
+
+---> For an unchecked exception, the compiler does not force us to
+    handle or declare it.
+
+    The exception generally occurs at runtime.
+
+
+throw Keyword
+=============
+
+---> The throw keyword is used to explicitly throw an exception object.
+
+---> It is used inside a method or block of code.
+
+---> It throws one exception object at a time.
+
+Example:
+
+throw new Exception("Something went wrong");
+
+
+throws Keyword
+==============
+
+---> The throws keyword is used in the method signature to declare
+    that the method may throw one or more exceptions.
+
+---> It tells the caller that the method is not handling the exception
+    and the caller must handle it or further declare it.
+
+---> It can declare multiple exceptions at a time.
+
+Example:
+
+public void readFile() throws IOException, SQLException {
+
+}
