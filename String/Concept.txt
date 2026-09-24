@@ -17,5 +17,56 @@ String s3=new String("Hello");    //it creates inside heap memory and point anot
 we can force this object to String pool
 String s3=new String("Hello").intern();
 
+String immutable
+====================
+In Java String are immutable that means once an object is created it's value can not be modify.If we want to modify this object a new reference is created but not the original object is change.
+
 /*-----------------------------------string method-------------------------------------*/
+String s="Hello world"
 1.length()
+s.length()          //11
+
+2.String s2=s.concat("!");  
+System.out.println(s2) ;        //Hello World!
+
+3.s.charAt(0)           //H 
+4.s.indexOf('H')        //0
+5.String s2="Hello"
+s.equals(s2);           //false 
+6.String arr[]=s.split(' ');
+7.s.replace("old character","new character");
+8.s.toLoweCase()
+9.s.toUpperCase()
+10. s.contains("Hello")
+11.s.startsWith("Hello")
+12.s.endsWith("World!")
+13.s.trim()
+14.String.join('-',arr);
+
+
+stringBuilder
+========================
+it is mutable that means we can modify the object.
+It is faster
+It is thread unsafe because of it's method are not synchronized
+
+StringBuilder br=new StringBuilder("Hello world");
+
+1.br.append("!");
+2.br.replace(6,11,"Manas");
+3.br.insert(11,"Ghosh");
+4.br.reverse();
+5.br.delete(0,6);
+
+StringBuffer
+=========================
+It is mutable means this object can be modify.
+It is thread safe and synchronous.
+
+StringBuffer sb=new StringBuffer("Manas Ghosh");
+
+1.sb.append("sir");
+2.sb.insert(6,"good mornong");
+3.sb.reverse();
+4.sb.delete(0,11);
+5.sb.replace(4,6,"gh");
