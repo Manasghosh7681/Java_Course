@@ -1,0 +1,132 @@
+/*---------------------------------File Handling--------------------------------------------*/
+
+File handling classes mainly come under java.io package.
+
+import java.io.*;
+
+File f1 = new File(filename);
+
+1. f1.exists()
+   // Checks whether the file or directory exists.
+
+2. f1.createNewFile()
+   // Creates a new empty file.
+   // Returns true if the file is created successfully.
+
+3. f1.getAbsolutePath()
+   // Gives the absolute path of the file.
+
+4. f1.canRead()
+   // Checks whether the file can be read.
+
+5. f1.canWrite()
+   // Checks whether the file can be written.
+
+6. f1.length()
+   // Gives the size of the file in bytes.
+
+7. f1.getName()
+   // Gives the name of the file.
+
+8. f1.delete()
+   // Deletes the file or empty directory.
+
+
+
+/*---------------------------------FileInputStream--------------------------------------------*/
+
+FileInputStream
+====================
+
+It is used to read data from a file in the form of bytes.
+
+FileInputStream fis = new FileInputStream(fileName);
+
+fis.read();
+// Reads one byte at a time.
+// When the end of the file is reached, it returns -1.
+
+
+/*---------------------------------FileOutputStream--------------------------------------------*/
+
+FileOutputStream
+====================
+
+It is used to write data to a file in the form of bytes.
+
+FileOutputStream fos = new FileOutputStream(fileName,true);  //for append Data
+
+fos.write(byteData);
+// Writes byte data into the file.
+
+byte[] byteData = data.getBytes();
+// Converts String data into bytes.
+
+
+/*---------------------------------FileReader--------------------------------------------*/
+
+FileReader
+==================
+
+It is used to read character data from a file.
+
+FileReader fr = new FileReader(fileName);
+
+fr.read();
+// Reads one character at a time.
+
+
+/*---------------------------------FileWriter--------------------------------------------*/
+
+FileWriter
+=================
+
+It is used to write character data to a file.
+
+FileWriter fw = new FileWriter(fileName,true);      //true for append data
+
+fw.write(data);
+// Writes character data into the file.
+
+
+/*---------------------------------BufferedReader--------------------------------------------*/
+
+BufferedReader
+=====================
+
+It is used to read character data efficiently by using a buffer.
+
+It can read a complete line at a time.
+
+BufferedReader br =
+    new BufferedReader(new FileReader(fileName));
+
+br.readLine();
+// Reads one complete line.
+
+
+// BufferedReader internally buffers the character data,
+// so it reduces direct read operations from the file.
+
+
+/*---------------------------------BufferedWriter--------------------------------------------*/
+
+BufferedWriter
+================
+
+It is used to write character data efficiently by using a buffer.
+
+BufferedWriter bw =
+    new BufferedWriter(new FileWriter(fileName));
+
+bw.write(data);
+// Writes character data into the buffer.
+
+bw.newLine();
+// Writes a new line.
+
+bw.flush();
+// Sends the buffered data to the file.
+
+bw.close();
+// Closes the BufferedWriter.
