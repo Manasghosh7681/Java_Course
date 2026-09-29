@@ -1,8 +1,104 @@
 /*----------------------------------Constructor--------------------------------------------------*/
-Constructor is a special method whose name is same as class name. A constructor is call automatically when an object is create. Constructor does not have any return type.Constructor can not be abstract,static,final.Constructor Only have access modifier.
-There are 4 types of constructor
 
-1.default constructor :-if in a class there is no constructor that java automatically provide a default constructor.
-2. parameterized constructor :Constructor which takes parameter is called parameterized constructor.
-3. Non-parameterized Constructor : If a constructor have no parameter then it is called so.
-4. Copy constructor : THis constructor take an object as an parameter. It is used to copy an object.
+/*
+A constructor is a special member of a class that is used to initialize an object.
+
+The name of a constructor must be the same as the class name.
+
+A constructor is called automatically when an object is created.
+
+A constructor does not have a return type, not even void.
+
+A constructor cannot be abstract, static, or final.
+
+A constructor can have access modifiers such as:
+    public
+    private
+    protected
+    default
+
+A class can have multiple constructors with different parameters.
+This is called constructor overloading.
+*/
+
+
+/*----------------------------------Types of Constructor------------------------------------------*/
+
+/*
+1. Default Constructor
+
+If we do not declare any constructor in a class,
+the Java compiler automatically provides a default constructor.
+
+Example:
+
+class Student {
+
+}
+
+Here, the compiler provides a default constructor automatically.
+*/
+
+
+/*
+2. No-Argument Constructor
+
+A constructor that does not take any parameters
+is called a no-argument constructor.
+
+Example:
+
+class Student {
+
+    Student() {
+        System.out.println("Student Constructor");
+    }
+}
+*/
+
+
+/*
+3. Parameterized Constructor
+
+A constructor that takes one or more parameters
+is called a parameterized constructor.
+
+Example:
+
+class Student {
+
+    int id;
+    String name;
+
+    Student(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+}
+*/
+
+
+/*
+4. Copy Constructor
+
+A constructor that takes an object of the same class as a parameter
+and copies the values from that object is commonly called a copy constructor.
+
+Example:
+
+class Student {
+
+    int id;
+    String name;
+
+    Student(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    Student(Student s) {
+        this.id = s.id;
+        this.name = s.name;
+    }
+}
+*/

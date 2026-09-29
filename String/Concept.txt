@@ -1,72 +1,445 @@
 /*------------------------------------------String----------------------------------------------*/
-A string is a sequence of character that is enclosed with double quotes. it is also called string literal.
-char ch[]={'h','i','i'};
-String s= new String(ch);       //String object it create inside heap memory
-String s1="Hello";              //String literal it creates inside String pool means Heap->String Pool
 
-if we create identical string literal it points to the same memory location
-ex:
-String s2="Hello"
- Here s1,s2 point to the same memory location in the string constant pool.
+/*
+A String is a sequence of characters enclosed in double quotes.
 
-System.out.println(s1==s2);         //true here compare the memory location not value
+A String literal is a sequence of characters written inside double quotes.
 
-if we create 
-String s3=new String("Hello");    //it creates inside heap memory and point another memory location.
+Example:
 
-we can force this object to String pool
-String s3=new String("Hello").intern();
-
-String immutable
-====================
-In Java String are immutable that means once an object is created it's value can not be modify.If we want to modify this object a new reference is created but not the original object is change.
-
-/*-----------------------------------string method-------------------------------------*/
-String s="Hello world"
-1.length()
-s.length()          //11
-
-2.String s2=s.concat("!");  
-System.out.println(s2) ;        //Hello World!
-
-3.s.charAt(0)           //H 
-4.s.indexOf('H')        //0
-5.String s2="Hello"
-s.equals(s2);           //false 
-6.String arr[]=s.split(' ');
-7.s.replace("old character","new character");
-8.s.toLoweCase()
-9.s.toUpperCase()
-10. s.contains("Hello")
-11.s.startsWith("Hello")
-12.s.endsWith("World!")
-13.s.trim()
-14.String.join('-',arr);
+String s = "Hello";
+*/
 
 
-stringBuilder
-========================
-it is mutable that means we can modify the object.
-It is faster
-It is thread unsafe because of it's method are not synchronized
+/*
+We can also create a String object using a character array.
 
-StringBuilder br=new StringBuilder("Hello world");
+Example:
 
-1.br.append("!");
-2.br.replace(6,11,"Manas");
-3.br.insert(11,"Ghosh");
-4.br.reverse();
-5.br.delete(0,6);
+char ch[] = {'h', 'i', 'i'};
 
-StringBuffer
-=========================
-It is mutable means this object can be modify.
-It is thread safe and synchronous.
+String s = new String(ch);
 
-StringBuffer sb=new StringBuffer("Manas Ghosh");
+This creates a String object in the heap.
+*/
 
-1.sb.append("sir");
-2.sb.insert(6,"good mornong");
-3.sb.reverse();
-4.sb.delete(0,11);
-5.sb.replace(4,6,"gh");
+
+/*-------------------------------------String Literal------------------------------------------*/
+
+/*
+Example:
+
+String s1 = "Hello";
+
+A String literal is stored in the String Pool,
+which is part of the heap memory.
+*/
+
+
+/*
+If we create identical String literals,
+Java reuses the same String object from the String Pool.
+
+Example:
+
+String s1 = "Hello";
+String s2 = "Hello";
+
+Both s1 and s2 refer to the same String object
+in the String Pool.
+
+System.out.println(s1 == s2);    // true
+
+
+The == operator compares the references,
+not the String contents.
+*/
+
+
+/*-------------------------------------new String()------------------------------------------*/
+
+/*
+If we create a String using new:
+
+String s3 = new String("Hello");
+
+A new String object is created in the heap.
+
+The literal "Hello" may also exist in the String Pool,
+but s3 refers to the newly created String object.
+*/
+
+
+/*-------------------------------------intern()------------------------------------------*/
+
+/*
+We can use intern() to get the String Pool reference.
+
+Example:
+
+String s3 = new String("Hello").intern();
+
+Now s3 refers to the "Hello" object in the String Pool.
+
+Example:
+
+String s1 = "Hello";
+String s3 = new String("Hello").intern();
+
+System.out.println(s1 == s3);    // true
+*/
+
+
+/*-------------------------------------String Immutable------------------------------------------*/
+
+/*
+String is immutable in Java.
+
+Immutable means that once a String object is created,
+its value cannot be changed.
+
+If we perform an operation that appears to modify a String,
+a new String object is created instead of modifying the original object.
+
+Example:
+
+String s = "Hello";
+
+s.concat(" World");
+
+The original String "Hello" is not changed.
+
+
+If we write:
+
+s = s.concat(" World");
+
+a new String object is created,
+and s now refers to the new object.
+*/
+
+
+/*-----------------------------------String Methods-------------------------------------*/
+
+String s = "Hello World";
+
+
+/*
+1. length()
+
+Returns the number of characters in the String.
+
+Example:
+
+s.length();       // 11
+*/
+
+
+/*
+2. concat()
+
+Used to join two Strings.
+
+Example:
+
+String s2 = s.concat("!");
+
+System.out.println(s2);       // Hello World!
+*/
+
+
+/*
+3. charAt()
+
+Returns the character at the specified index.
+
+Example:
+
+s.charAt(0);       // H
+*/
+
+
+/*
+4. indexOf()
+
+Returns the index of the specified character or String.
+
+Example:
+
+s.indexOf('H');    // 0
+*/
+
+
+/*
+5. equals()
+
+Compares the contents of two Strings.
+
+Example:
+
+String s2 = "Hello";
+
+s.equals(s2);      // false
+
+Because s contains "Hello World"
+and s2 contains "Hello".
+*/
+
+
+/*
+6. split()
+
+Splits a String into an array based on the specified delimiter.
+
+Example:
+
+String arr[] = s.split(" ");
+
+Result:
+
+["Hello", "World"]
+
+Note: split() takes a String as its argument,
+so use " " instead of ' '.
+*/
+
+
+/*
+7. replace()
+
+Replaces characters or character sequences.
+
+Example:
+
+s.replace("World", "Java");
+
+Result:
+
+Hello Java
+*/
+
+
+/*
+8. toLowerCase()
+
+Converts the String to lowercase.
+
+Example:
+
+s.toLowerCase();
+
+Result:
+
+hello world
+*/
+
+
+/*
+9. toUpperCase()
+
+Converts the String to uppercase.
+
+Example:
+
+s.toUpperCase();
+
+Result:
+
+HELLO WORLD
+*/
+
+
+/*
+10. contains()
+
+Checks whether the String contains the specified sequence.
+
+Example:
+
+s.contains("Hello");       // true
+*/
+
+
+/*
+11. startsWith()
+
+Checks whether the String starts with the specified sequence.
+
+Example:
+
+s.startsWith("Hello");     // true
+*/
+
+
+/*
+12. endsWith()
+
+Checks whether the String ends with the specified sequence.
+
+Example:
+
+s.endsWith("World");       // true
+*/
+
+
+/*
+13. trim()
+
+Removes leading and trailing spaces.
+
+Example:
+
+String s2 = "  Hello World  ";
+
+s2.trim();
+
+Result:
+
+"Hello World"
+*/
+
+
+/*
+14. String.join()
+
+Joins multiple Strings using the specified delimiter.
+
+Example:
+
+String arr[] = {"Hello", "World"};
+
+String result = String.join("-", arr);
+
+Result:
+
+Hello-World
+*/
+
+
+/*-----------------------------------StringBuilder-------------------------------------*/
+
+/*
+StringBuilder is mutable.
+
+Mutable means that the same object can be modified
+without creating a new object for every modification.
+
+StringBuilder is generally faster than StringBuffer.
+
+StringBuilder is not thread-safe because its methods
+are not synchronized.
+*/
+
+
+StringBuilder br = new StringBuilder("Hello World");
+
+
+/*
+1. append()
+
+Adds data at the end.
+
+br.append("!");
+
+Result:
+
+Hello World!
+*/
+
+
+/*
+2. replace()
+
+Replaces characters from the start index
+(inclusive) to the end index (exclusive).
+
+br.replace(6, 11, "Manas");
+
+Result:
+
+Hello Manas
+*/
+
+
+/*
+3. insert()
+
+Inserts data at the specified index.
+
+Example:
+
+br.insert(6, "Ghosh ");
+
+*/
+
+
+/*
+4. reverse()
+
+Reverses the StringBuilder.
+
+br.reverse();
+*/
+
+
+/*
+5. delete()
+
+Deletes characters from the start index
+(inclusive) to the end index (exclusive).
+
+br.delete(0, 6);
+*/
+
+
+/*-----------------------------------StringBuffer-------------------------------------*/
+
+/*
+StringBuffer is also mutable.
+
+It allows us to modify the same object.
+
+StringBuffer is thread-safe because its methods
+are synchronized.
+
+Because of synchronization, StringBuffer can be slower
+than StringBuilder in single-threaded situations.
+*/
+
+
+StringBuffer sb = new StringBuffer("Manas Ghosh");
+
+
+/*
+1. append()
+
+sb.append(" sir");
+*/
+
+
+/*
+2. insert()
+
+sb.insert(6, "Good Morning ");
+*/
+
+
+/*
+3. reverse()
+
+sb.reverse();
+*/
+
+
+/*
+4. delete()
+
+sb.delete(0, 11);
+*/
+
+
+/*
+5. replace()
+
+sb.replace(4, 6, "gh");
+*/

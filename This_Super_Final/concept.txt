@@ -1,16 +1,182 @@
-/*-----------------------------This keyword---------------------------------*/
-1-it basically reference the current class object
-2.It is used to access current class instance variable
-3.it is used to invoke current class method
-4.it is used to invoke current class constructor
-5.it can be passed as an argument
+/*-----------------------------This Keyword---------------------------------*/
 
-/*-------------------------Super keyword-----------------------------------*/
-1.It is used to access parent class variable
-2.It is used to invoke parent class method
-3.It is used to invoke parent class constructor
+/*
+this refers to the current class object.
+*/
+
+1. It is used to refer to the current class object.
+
+2. It is used to access the current class instance variable.
+
+Example:
+
+class Student {
+    int id;
+
+    Student(int id) {
+        this.id = id;
+    }
+}
+
+Here:
+
+this.id       → current class instance variable
+id            → constructor parameter
+
+
+3. It is used to invoke the current class method.
+
+Example:
+
+class Student {
+    void display() {
+        System.out.println("Student");
+    }
+
+    void show() {
+        this.display();
+    }
+}
+
+
+4. It is used to invoke the current class constructor.
+
+Example:
+
+class Student {
+    Student() {
+        System.out.println("No argument constructor");
+    }
+
+    Student(int id) {
+        this();
+        System.out.println("Parameterized constructor");
+    }
+}
+
+this() → calls the current class constructor.
+
+
+5. It can be passed as an argument.
+
+Example:
+
+class Student {
+    void display(Student s) {
+        System.out.println("Student object received");
+    }
+
+    void show() {
+        display(this);
+    }
+}
+
+Here, this represents the current object.
+
+
+/*-------------------------Super Keyword-----------------------------------*/
+
+/*
+super refers to the immediate parent class object.
+*/
+
+
+1. It is used to access the parent class variable.
+
+Example:
+
+class Parent {
+    int a = 10;
+}
+
+class Child extends Parent {
+    int a = 20;
+
+    void show() {
+        System.out.println(super.a);
+    }
+}
+
+super.a → accesses the parent class variable.
+
+
+2. It is used to invoke the parent class method.
+
+Example:
+
+class Parent {
+    void display() {
+        System.out.println("Parent");
+    }
+}
+
+class Child extends Parent {
+    void display() {
+        System.out.println("Child");
+    }
+
+    void show() {
+        super.display();
+    }
+}
+
+super.display() → calls the parent class method.
+
+
+3. It is used to invoke the parent class constructor.
+
+Example:
+
+class Parent {
+    Parent() {
+        System.out.println("Parent Constructor");
+    }
+}
+
+class Child extends Parent {
+    Child() {
+        super();
+        System.out.println("Child Constructor");
+    }
+}
+
+super() → calls the parent class constructor.
+
 
 /*--------------------------Final Keyword----------------------------------*/
-1.If we make variable final then we can not change its value if it's assigned once.
-2.If we make a method final then we can not overide it.
-3.If we make a class final then we can not extend it.
+
+1. If we make a variable final, its value cannot be reassigned
+   after it has been assigned.
+
+Example:
+
+final int a = 10;
+
+// a = 20;    ❌ Error
+
+
+2. If we make a method final, it cannot be overridden
+   by a child class.
+
+Example:
+
+class Parent {
+    final void display() {
+        System.out.println("Parent");
+    }
+}
+
+class Child extends Parent {
+
+    // void display() { }    ❌ Cannot override final method
+}
+
+
+3. If we make a class final, it cannot be extended.
+
+Example:
+
+final class Parent {
+}
+
+// class Child extends Parent { }    ❌ Cannot extend final class

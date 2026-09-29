@@ -1,172 +1,450 @@
-// What is class ?
-/* A class is a blueprint or template that defines an object properties and behavior */
+// What is a class ?
+/*
+A class is a blueprint or template that defines the properties and behavior of an object.
+*/
 
-//What is Object ?
-/* An object is an instance of a class that contains actual value for the properties and can perform the behavior defined by the class */
 
-//What is public static void main(String args[])
-/* main method is public because jvm needs to access and call it from outside the class */
-/* main method is static because when main method run there is no object created. So how we can call a non-static method that's why main method is static so that jvm call the main method without an object */
-/* main method is void because jvm not expect that main method should return any value /*
-/* String args[] it is String because Command line argument are recive as a string and args[] because we can take multiple input at a time through command line */
+// What is an Object ?
+/*
+An object is an instance of a class.
+It contains actual values for the properties and can perform the behavior defined by the class.
+*/
 
-// How java program execute ?
-/* java code 1st compile through javac compiler and it convert into class file and that class file is executed by the JVM */
+
+// What is public static void main(String args[]) ?
+
+/*
+main() method is public because the JVM needs to access and call it from outside the class.
+*/
+
+/*
+main() method is static because the JVM can call it without creating an object of the class.
+*/
+
+/*
+main() method is void because it does not return any value to the JVM.
+*/
+
+/*
+String args[] is used to receive command-line arguments.
+Command-line arguments are received as String values.
+
+args[] is an array, so it can store multiple command-line arguments.
+*/
+
+
+// How does a Java program execute ?
+
+/*
+Java source code is first compiled using the javac compiler.
+
+.java file
+    ↓
+javac compiler
+    ↓
+.class file (Bytecode)
+    ↓
+JVM
+    ↓
+Machine Code
+    ↓
+Program Execution
+*/
 
 
 /*-------------------------------------Variable--------------------------------------------------*/
 
-//What is variable ?
-/* A variable is a memory location where a value is store and this value can be change */
-/* There are 3 types of variable
-1. Local variable :Variable which are declare inside the method is called local variable. it is access only inside the method where it is declare.
-2. Instance variable :Variable which are declare inside the class but outside the method is call Instance variable .It can be access anywhere inside the class .
-3. Static variable :Variable that are declare inside the class but outside method and it mark with static keyword. THis variable are belongs to the class. These are created only once and all the object are share it. It can be access anywhere inside the class .*/
+// What is a variable ?
+
+/*
+A variable is a named memory location used to store a value.
+
+The value of a variable can be changed during program execution,
+unless the variable is declared as final.
+*/
+
+
+/*
+There are 3 types of variables:
+
+1. Local Variable
+A variable declared inside a method, constructor, or block is called a local variable.
+
+It can be accessed only within the method, constructor, or block
+where it is declared.
+
+
+2. Instance Variable
+A variable declared inside a class but outside a method, constructor, or block
+is called an instance variable.
+
+It belongs to an object.
+Each object has its own copy of an instance variable.
+
+
+3. Static Variable
+A variable declared inside a class but outside a method, constructor, or block
+using the static keyword is called a static variable.
+
+It belongs to the class rather than an individual object.
+
+Only one copy of a static variable is created for a class,
+and all objects share that variable.
+*/
+
 
 /*-----------------------------------------Constant---------------------------------------------*/
 
-// What is constant ?
-/* A constant is a value that can not be changed once it is assigned. It is not necessary that at the declaration time value need to assign. But it is mandatory before use this it should be assign with some value. */
+// What is a constant ?
+
+/*
+A constant is a variable whose value cannot be changed after it has been assigned.
+
+In Java, a constant is generally created using the final keyword.
+
+It is not necessary to assign the value at the time of declaration.
+
+But the final variable must be assigned a value before it is used.
+*/
+
+Example:
+
+final int a;
+
+a = 10;
+
+
+// a = 20;  // Error
+
 
 /*-----------------------------------------Datatype----------------------------------------------*/
-//What is Datatype ?
-/* Datatype defines what type of value can store a variable 
-There are 8 types of Datatype
-1.byte   | Size:1byte |Default Value 0
-2.short  | Size:2byte |Default Value 0
-3.int    | size:4byte |Default Value 0
-4.long   | size:8byte |Default Value 0L
-5.float  | size:4byte |Default Value 0.0f
-6.double | size:8byte |Default Value 0.0d
-7.char   | size:1byte |Default Value '\u0000'
-8.boolean             |Default Value false
+
+// What is a Data Type ?
+
+/*
+A data type defines what type of value a variable can store.
+
+There are 8 primitive data types in Java.
 */
 
-/*-------------------------------------Wrapper class-----------------------------------------------*/
-//What is wrapper class ?
-/* There are 2 types
-1.AutoBoxing :-The process of converting primitive Datatype to object is called Autoboxing.
-2.UnBoxing :-The process of converting object to primitive Datatype is called unboxing.
-primitive Datatype                        Object
-===================                     ===================
-byte                                    Byte
-short                                   Short
-int                                     Integer
-long                                    Long
-float                                   Float
-double                                  Double
-char                                    Character
-boolean                                 Boolean 
-Ex :-AutoBoxing
-int a=10;
-Integer obj=Integer.valueOf(a) 
-Integer obj2=a
 
-Ex :-UnBoxing
-int pri=obj
+/*
+1. byte     | Size: 1 byte  | Default value: 0
+2. short    | Size: 2 bytes | Default value: 0
+3. int      | Size: 4 bytes | Default value: 0
+4. long     | Size: 8 bytes | Default value: 0L
+5. float    | Size: 4 bytes | Default value: 0.0f
+6. double   | Size: 8 bytes | Default value: 0.0d
+7. char     | Size: 2 bytes | Default value: '\u0000'
+8. boolean  | Size: JVM-dependent | Default value: false
 */
+
+
+/*
+Important:
+
+The default values above apply to instance and static variables.
+
+Local variables do NOT get default values.
+A local variable must be initialized before it is used.
+*/
+
+
+/*-------------------------------------Wrapper Class-----------------------------------------------*/
+
+// What is a Wrapper Class ?
+
+/*
+Wrapper classes are classes that provide object representations of primitive data types.
+
+Primitive Data Type       Wrapper Class
+===================       ==============
+byte                      Byte
+short                     Short
+int                       Integer
+long                      Long
+float                     Float
+double                    Double
+char                      Character
+boolean                   Boolean
+*/
+
+
+/*
+There are two related concepts:
+
+1. Autoboxing
+The automatic conversion of a primitive data type into its corresponding wrapper object
+is called autoboxing.
+
+
+Example:
+
+int a = 10;
+
+Integer obj = Integer.valueOf(a);
+
+Integer obj2 = a;       // Autoboxing
+*/
+
+
+/*
+2. Unboxing
+The automatic conversion of a wrapper object into its corresponding primitive data type
+is called unboxing.
+
+
+Example:
+
+Integer obj = 10;
+
+int pri = obj;          // Unboxing
+*/
+
 
 /*---------------------------------------Type Conversion---------------------------------------------*/
-/*There are 2 types
-1. widening :-converting smaller Datatype into higher Datatype.
-ex: int a=10;
-    long b=a;
-2. Narrowing :-converting higher Datatype into smaller Datatype.
-ex: float a=20.0f;
-    int b=(int)a;
+
+/*
+There are two types of type conversion:
+
+1. Widening
+Converting a smaller data type into a larger compatible data type.
+
+Example:
+
+int a = 10;
+long b = a;
 */
+
+
+/*
+2. Narrowing
+Converting a larger data type into a smaller data type.
+
+Explicit type casting is required.
+
+Example:
+
+float a = 20.0f;
+int b = (int) a;
+*/
+
 
 /*---------------------------------Operator------------------------------------------------*/
-/*An Operator is a symbol that is basically used to perform an operation. An operator is placed between two operand .
-1. Arithmetic Operator :(+,-,*,/,%)
-2. Relational Operator :(<,>,<=,>=,==,!=)
-3. logical Operator :(&&,||,!)
-4. Assignment Operator :(=,+=,-=,*=,/=,%=)
-5. Unary Operator :(++,--)
-6. Ternary Operator :(?:)
-7. Bitwise Operator : (&,|,>>,<<)
+
+/*
+An operator is a symbol that is used to perform an operation on one or more operands.
+
+Types of operators:
+
+1. Arithmetic Operator
+   (+, -, *, /, %)
+
+2. Relational Operator
+   (<, >, <=, >=, ==, !=)
+
+3. Logical Operator
+   (&&, ||, !)
+
+4. Assignment Operator
+   (=, +=, -=, *=, /=, %=)
+
+5. Unary Operator
+   (+, -, ++, --, !)
+
+6. Ternary Operator
+   (?:)
+
+7. Bitwise Operator
+   (&, |, ^, ~, >>, <<, >>>)
 */
 
+
 /*-----------------------------------------Conditional Statement--------------------------------*/
-/*1.if
-2.if else
-3.if else if
-4.switch
-5.yield = Return a value to the case it is used in switch case.
- */
 
- /*-----------------------------------Loops----------------------------------------------------*/
- /* 1.while Loop
- initialization counter
- while(condition){
-    //execute if condition true
-     update counter
- }
+/*
+1. if
+2. if-else
+3. if-else-if
+4. switch
+5. switch expression with yield
+
+yield is used inside a switch expression to return a value from a case.
+*/
 
 
- 2. For Loop
- for(initialization,condition,counter){
-    //excute if condition satisfy
- }
- 3. do while Loop
-initialization counter
- do{
-    //
-    update counter;
- }while(condition);
- 
+/*-----------------------------------Loops----------------------------------------------------*/
 
- 4. for-each loop : it is basically used for traverse in array
- for(Datatype variable: arrayName){
+/*
+1. while Loop
 
- }
+initialization;
 
- /*--------------------------------------Methods---------------------------------------------*/
- A function that is declared inside a class is called Method;
+while (condition) {
 
-Declaration
------------------
-access modifier(public,private,protected,default)
-return type (ex:-int,void,float,String,boolean)
+    // execute if condition is true
 
-ex:- public void methodName(int x,int y){
+    update;
+}
+*/
+
+
+/*
+2. for Loop
+
+for (initialization; condition; update) {
+
+    // execute if condition is true
+}
+*/
+
+
+/*
+3. do-while Loop
+
+initialization;
+
+do {
+
+    // execute
+
+    update;
+
+} while (condition);
+*/
+
+
+/*
+4. for-each Loop
+
+The for-each loop is mainly used to traverse arrays and collections.
+
+for (DataType variable : arrayName) {
+
+}
+*/
+
+
+/*--------------------------------------Methods---------------------------------------------*/
+
+/*
+A method is a block of code declared inside a class
+that performs a specific task.
+*/
+
+
+/*
+Method Declaration:
+
+access modifier
+return type
+method name
+parameters
+*/
+
+
+Example:
+
+public void methodName(int x, int y) {
 
 }
 
-Types of Method
-1. instance method 
-ex :- public void display(){
+
+/*--------------------------------------Types of Methods-------------------------------------*/
+
+/*
+1. Instance Method
+
+Example:
+
+public void display() {
 
 }
-//This method is call through an object only
-2. static method
-public static void display(){
+
+An instance method is associated with an object.
+
+It can be called using an object:
+
+ObjectName.display();
+*/
+
+
+/*
+2. Static Method
+
+Example:
+
+public static void display() {
 
 }
-//This method is invoke using the class name. Inside the statis methosd we can not use instance property and method
 
-3. final Method
-public final void display(){
+A static method belongs to the class.
+
+It can be called using the class name:
+
+ClassName.display();
+
+A static method cannot directly access instance variables
+or instance methods.
+*/
+
+
+/*
+3. Final Method
+
+Example:
+
+public final void display() {
 
 }
-//if we make a method final then we can not override that method
 
-4. abstract method
+If a method is declared final, it cannot be overridden by a child class.
+*/
+
+
+/*
+4. Abstract Method
+
+Example:
+
 public abstract void display();
-// The method which have no body is called abstract method. It is present inside an abstract class or interface.
 
-variable length argument
-==========================
-it allows a method to accept a variable number of arguments of the same Datatype.
+An abstract method does not have a method body.
 
-public void add(int ...a){
-    int res=0;
-    for(int arg:a){
-        res+=arg;
+It must be declared inside an abstract class or interface.
+
+The child class must provide the implementation
+of the abstract method unless the child class is also abstract.
+*/
+
+
+/*-----------------------------------Variable Length Argument--------------------------------*/
+
+/*
+A variable-length argument (varargs) allows a method to accept
+zero or more arguments of the same data type.
+
+Syntax:
+
+public void add(int... a) {
+
+    int res = 0;
+
+    for (int arg : a) {
+        res += arg;
     }
+
     System.out.println(res);
 }
+*/
+
+
+Example:
+
 add(1);
-add(1,2);
-add(1,2,3);
-add(1,2,3,4);
+
+add(1, 2);
+
+add(1, 2, 3);
+
+add(1, 2, 3, 4);

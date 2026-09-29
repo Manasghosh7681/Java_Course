@@ -1,36 +1,158 @@
 /*---------------------------------------Array----------------------------------------------*/
-In Java array is an Object.
-It store similar kind of data.
-It size is fixed.
-It store in heap memory and the reference variable refer to the array object .
 
-Declaration
-=====================
-int arrayName[]=new int[size];
+In Java, an array is an object.
 
-intialization
+An array stores multiple values of the same data type.
+
+The size of an array is fixed.
+Once an array is created, its size cannot be changed.
+
+An array object is created in heap memory, and the reference variable
+refers to the array object.
+
+
+Declaration and Creation
+=========================
+
+int arrayName[] = new int[size];
+
+
+Initialization
 ================
-arrayName[index]=value;
 
-Array methods
+arrayName[index] = value;
+
+
+Example:
+
+int arr[] = new int[4];
+
+arr[0] = 10;
+arr[1] = 20;
+arr[2] = 30;
+arr[3] = 40;
+
+
+Array Methods
 ====================
-it comes under 
+
+Array utility methods are provided by the Arrays class.
+
+Import:
+
 import java.util.Arrays;
 
-int arr[]={10,20,30,40};
-1.Arrays.toString(arr);
-System.out.println(Arrays.toString(arr));   //print the array
 
-2.Arrays.sort(arr)
-System.out.println(Arrays.sort(arr));       //Sort array in ascending order
+Example:
 
-3.Arrays.binearySearch(arr,value);      //used to search an element
-
-4.Arrays.equals(a,b);           //used to check the 2 array contain same element
-5.Arrays.fill(arr,100);     //used to fill an array with same element
-6.Arrays.copyOf(arr,length)        //used to copy an array
+int arr[] = {10, 20, 30, 40};
 
 
-===================Properties=========================
-arr.length      //it gives the length of the array
+1. Arrays.toString(arr)
+--------------------------------
 
+Used to convert an array into a String representation
+so that we can print the array easily.
+
+System.out.println(Arrays.toString(arr));
+
+
+Output:
+
+[10, 20, 30, 40]
+
+
+2. Arrays.sort(arr)
+--------------------------------
+
+Used to sort an array in ascending order.
+
+Arrays.sort(arr);
+
+System.out.println(Arrays.toString(arr));
+
+
+Output:
+
+[10, 20, 30, 40]
+
+
+Example:
+
+int arr[] = {40, 10, 30, 20};
+
+Arrays.sort(arr);
+
+System.out.println(Arrays.toString(arr));
+
+
+Output:
+
+[10, 20, 30, 40]
+
+
+3. Arrays.binarySearch(arr, value)
+--------------------------------
+
+Used to search for an element in an array.
+
+The array should be sorted before using binarySearch().
+
+int index = Arrays.binarySearch(arr, 30);
+
+System.out.println(index);
+
+
+4. Arrays.equals(a, b)
+--------------------------------
+
+Used to check whether two arrays contain the same elements
+in the same order.
+
+boolean result = Arrays.equals(a, b);
+
+System.out.println(result);
+
+
+5. Arrays.fill(arr, value)
+--------------------------------
+
+Used to fill all elements of an array with the same value.
+
+Arrays.fill(arr, 100);
+
+System.out.println(Arrays.toString(arr));
+
+
+Output:
+
+[100, 100, 100, 100]
+
+
+6. Arrays.copyOf(arr, length)
+--------------------------------
+
+Used to copy an array into a new array with the specified length.
+
+int newArr[] = Arrays.copyOf(arr, 6);
+
+System.out.println(Arrays.toString(newArr));
+
+
+=================== Properties =========================
+
+
+arr.length
+
+Used to get the length of an array.
+
+Example:
+
+int arr[] = {10, 20, 30, 40};
+
+System.out.println(arr.length);
+
+
+Output:
+
+4

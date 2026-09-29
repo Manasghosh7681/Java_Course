@@ -1,107 +1,240 @@
 /*-------------------------------------------Access Modifier---------------------------------------*/
-There are 4 types of modifier.
-1.private
-2.public
-3.protected
-4.default
-private
-=================
-It is access only inside the class
 
-public
-================
-It is access every where
+/*
+There are 4 access levels in Java:
 
-Protected 
-=================
-It is access inside the same class,inside the same package and also from subclasses in another package.
+1. private
+2. public
+3. protected
+4. default
+*/
 
-default
-================
-it is access on the same package
-ex:
-package college;
-Student.java
------------------
-package college;
+
+/*-------------------------------------------private---------------------------------------*/
+
+/*
+private members can be accessed only inside the same class.
+*/
+
 class Student {
 
-    int marks = 90; 
+    private int marks = 90;
+
+    public void display() {
+        System.out.println(marks);     // Accessible
+    }
 }
-class Main {
+
+
+/*-------------------------------------------public---------------------------------------*/
+
+/*
+public members can be accessed from anywhere,
+provided the class itself is accessible.
+*/
+
+
+/*-------------------------------------------protected---------------------------------------*/
+
+/*
+protected members can be accessed:
+
+1. Inside the same class
+2. Inside the same package
+3. Inside a subclass in another package
+*/
+
+
+/*-------------------------------------------default---------------------------------------*/
+
+/*
+If no access modifier is specified,
+the member has default (package-private) access.
+
+Default members can be accessed only within the same package.
+*/
+
+
+/*
+Example of default access:
+
+File: Student.java
+
+package college;
+
+public class Student {
+
+    int marks = 90;       // default access
+}
+*/
+
+
+/*
+File: Main.java
+
+package college;
+
+public class Main {
+
     public static void main(String[] args) {
 
         Student s = new Student();
 
-        System.out.println(s.marks); // Access here
+        System.out.println(s.marks);    // Accessible
     }
 }
+*/
+
+
+/*
+But from another package:
 
 package office;
-import college.student;
-class Main {
+
+import college.Student;
+
+public class Main {
+
     public static void main(String[] args) {
 
         Student s = new Student();
 
-        System.out.println(s.marks); // we can not access here
+        System.out.println(s.marks);    // ❌ Cannot access
     }
 }
 
+Reason:
+
+marks has default access,
+and Main belongs to a different package.
+*/
+
+
 /*----------------------------Packages------------------------------*/
-Package in java basically refers to the group of intefaces and classes;
-There are 2 types of Packages
-1.Built-in Packages
-ex:-java.lang
+
+/*
+A package in Java is a group of related classes, interfaces,
+and other types.
+
+Packages are used to organize code and avoid naming conflicts.
+*/
+
+
+/*
+There are two common types of packages:
+
+1. Built-in Packages
+2. User-defined Packages
+*/
+
+
+/*--------------------------------Built-in Packages--------------------------------*/
+
+/*
+Built-in packages are packages provided by Java.
+
+Examples:
+
+java.lang
 java.util
 java.io
 java.sql
-
-2.User defined Packages
-this package are created by the user
-Creating a Package:
-==========================
-   package packageName;
-
-   Example:
-   package student;
+*/
 
 
-Using a Package:
-==========================
-   import packageName.ClassName;
+/*--------------------------------User-defined Packages--------------------------------*/
 
-   Example:
-   import student.Student;
-
-
-Fully Qualified Name:
-=============================
-   Package name + Class name
-
-   Example:
-   student.Student
-
-   It can be used without an import statement.
+/*
+User-defined packages are packages created by the programmer
+to organize their own classes and interfaces.
+*/
 
 
-Package Naming Convention:
-===========================
-   Package names should generally be lowercase.
+/*--------------------------------Creating a Package--------------------------------*/
 
-   Example:
-   com.company.project
-   com.company.project.service
-   com.company.project.model
+/*
+Syntax:
 
-Static Import:
-=========================
-   Used to import static members of a class.
+package packageName;
 
-   import static java.lang.Math.PI;
 
-   Then:
-   System.out.println(PI);
+Example:
 
-   Instead of:
-   System.out.println(Math.PI);
+package student;
+*/
+
+
+/*--------------------------------Using a Package--------------------------------*/
+
+/*
+A class from another package can be imported using:
+
+import packageName.ClassName;
+
+
+Example:
+
+import student.Student;
+*/
+
+
+/*--------------------------------Fully Qualified Name--------------------------------*/
+
+/*
+A Fully Qualified Name (FQN) consists of:
+
+Package name + Class name
+
+
+Example:
+
+student.Student
+
+
+It can be used without an import statement.
+
+Example:
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        student.Student s = new student.Student();
+    }
+}
+*/
+
+
+/*--------------------------------Package Naming Convention--------------------------------*/
+
+/*
+Package names are generally written in lowercase.
+
+Examples:
+
+com.company.project
+com.company.project.service
+com.company.project.model
+*/
+
+
+/*--------------------------------Static Import--------------------------------*/
+
+/*
+Static import is used to import static members
+of another class.
+
+Example:
+
+import static java.lang.Math.PI;
+
+
+Then we can directly use:
+
+System.out.println(PI);
+
+
+Instead of:
+
+System.out.println(Math.PI);
+*/

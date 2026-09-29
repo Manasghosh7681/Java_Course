@@ -1,22 +1,30 @@
 /*------------------------------------Abstraction-------------------------------------------*/
-A class is said to be abstract if it is marked with abstract keyword.
-Abstract class contain all the things what a class contain but it add on abstract method.
-we can't create an object of abstract class.
-ex:
-abstract class House{
-    int a=10;
-    static int  b=10;
-    final int  c=10;
-    final static int  d=10;
-    House(){
-        
+
+A class is said to be abstract if it is declared using the abstract keyword.
+
+An abstract class can contain all the things that a normal class can contain,
+and it can also contain abstract methods.
+
+We cannot create an object of an abstract class directly.
+
+Example:
+
+abstract class House {
+
+    int a = 10;
+    static int b = 10;
+    final int c = 10;
+    final static int d = 10;
+
+    House() {
+
     }
 
-    public void concreteMethod(){
+    public void concreteMethod() {
 
     }
 
-    public static void staticMethod(){
+    public static void staticMethod() {
 
     }
 
@@ -25,26 +33,38 @@ abstract class House{
 
 
 /*---------------------------------------------Interface-----------------------------------------*/
-Interface is the blueprint of a class. It provide a structure that class needs to implement.
-it contain abstract method,default method,private method,static method.
-By default all the method public and abstract.
-Variable inside is a constant means public,final and static
 
-interface Template{
-    public final static int a=10;
-    
+An interface is a blueprint/contract for a class.
+It provides a structure that a class needs to implement.
+
+An interface can contain:
+    • Abstract methods
+    • Default methods
+    • Static methods
+    • Private methods
+
+By default, a method declared in an interface is public and abstract.
+
+Variables inside an interface are constants.
+By default, they are public, static, and final.
+
+Example:
+
+interface Template {
+
+    public final static int a = 10;
+
     abstract public void abstractMethod();
 
-    public static void staticMethod(){
+    public static void staticMethod() {
 
     }
 
-    default void defaultMethod(){
+    default void defaultMethod() {
 
     }
 
-    private void privateMethod()
-    {
+    private void privateMethod() {
 
     }
 }
