@@ -1,0 +1,113 @@
+/*---------------------------------------------JDBC-------------------------------------------*/
+
+JDBC - Java Database Connectivity
+
+JDBC is an API for Java.
+It allows Java applications to communicate with a database by sending SQL queries
+and processing the returned data.
+
+There are following steps:
+
+1. Load JDBC Driver
+
+Example:
+mysql-connector-j-9.7.0.jar
+
+The MySQL Connector/J JAR provides the JDBC driver required to connect
+a Java application with a MySQL database.
+
+
+2. Create Connection
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+try {
+    String url = "jdbc:mysql://localhost:3306/databaseName";
+
+    Connection con = DriverManager.getConnection(url, "root", "");
+
+} catch (SQLException e) {
+    System.out.println(e.getMessage());
+}
+
+Connection is used to establish a connection between Java and the database.
+
+
+3. Create Statement
+
+import java.sql.Statement;
+
+Statement stmt = con.createStatement();
+
+Statement is used to send SQL queries to the database.
+
+
+4. Execute SQL Query
+
+stmt.executeUpdate();
+
+It is used for:
+    INSERT
+    UPDATE
+    DELETE
+    CREATE TABLE
+    ALTER TABLE
+    DROP TABLE
+
+Example:
+
+String sql = "CREATE TABLE student (id INT, name VARCHAR(100))";
+
+stmt.executeUpdate(sql);
+
+
+stmt.executeQuery();
+
+It is used to retrieve data from the database using SELECT.
+
+Example:
+
+String sql = "SELECT * FROM student";
+
+ResultSet rs = stmt.executeQuery(sql);
+
+
+5. Process Result
+
+ResultSet is used to store and process the data returned by a SELECT query.
+
+Example:
+
+ResultSet rs = stmt.executeQuery("SELECT * FROM student");
+
+while (rs.next()) {
+    System.out.println(rs.getInt("id"));
+    System.out.println(rs.getString("name"));
+}
+
+Common ResultSet methods:
+
+rs.next()
+    → Moves the cursor to the next row.
+
+rs.getInt("columnName")
+    → Gets an integer value.
+
+rs.getString("columnName")
+    → Gets a String value.
+
+rs.getDouble("columnName")
+    → Gets a double value.
+
+rs.getBoolean("columnName")
+    → Gets a boolean value.
+
+
+6. Close Resources
+
+stmt.close();
+con.close();
+
+Closing resources is important after completing database operations.
