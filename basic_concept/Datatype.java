@@ -1,3 +1,4 @@
+package basic_concept;
 public class Datatype {
     public static void main(String[] args) {
         byte a=10;

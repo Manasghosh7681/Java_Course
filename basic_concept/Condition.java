@@ -1,3 +1,4 @@
+package basic_concept;
 public class Condition {
     public static void main(String[] args) {
         int age=20;

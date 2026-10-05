@@ -1,3 +1,4 @@
+package basic_concept;
 public class Loops {
     public static void main(String[] args) {
         //print 1 to 10 through while loop

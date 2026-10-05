@@ -1,0 +1,104 @@
+/*------------------------------------Collection Framework----------------------------------------*/
+Why do we need this?
+==============================
+Let's say we have to store 100 student names.
+It is not practical to create 100 variables to store the names.
+So, we can use an array to store these names.
+
+Example:
+String name[] = new String[100];
+
+But arrays have some drawbacks:
+
+1. Array has a fixed size.
+   If we create an array to store 100 names, we cannot directly store the 101st name.
+   If we have only 80 names, the remaining 20 positions remain unused.
+
+2. In an array, we normally store elements of the same declared type.
+   For example, if we declare an integer array, we can store only integer values.
+
+3. Insertion, deletion, and searching of elements can be inconvenient in an array.
+
+These limitations are addressed by the Collection Framework.
+
+
+What is Collection Framework?
+==============================
+A Collection Framework is a set of classes and interfaces used to store
+and manipulate a group of objects.
+
+Hierarchy of collection Framework
+===================================
+Iterable
+    |
+Collection
+    |
+1.List->ArrayList,LinkedList,Stack,Vector
+2.Set->HashSet,LinkedHashSet,TreeSet
+3.Queue->PriorityQueue,DeQue,ArrayDeque
+
+Deifference between Collection and Collections
+==================================================
+Collection
+-----------------
+1.Collection is an interface.
+2.It is used to represent group of object.
+ex:-Collection<String> names=new ArrayList<>();
+3.We can not create an Object of collection interface.
+4.It provides method like add(),addAll(),remove(),removeAll(),contains(),containsAll(),size(),isEmpty(),clear()
+
+Collections
+-----------------
+1.Collections is an utility class.
+2.It Provide utility method to work with collection.
+3.It provides static method.
+4.It provides method like sort(),shuffle(),reverse(),max(),min(),frequency(),swap(),fill()
+
+List
+===============
+1.ArrayList
+-----------------
+It is a resizeable array.
+It implements List interface.
+It maintains insertion order.
+It allows duplicate elements.
+It allows null value.
+It provides index based access.
+It provides method like add(),remove(),get(),set(),size(),contains(),isEmpty(),clear(),size(),indexOf(),lastIndexOf()
+
+2.LinkedList
+-----------------
+It is a doubly linked list.
+It maintains insertion order.
+It allows duplicate elements.
+It allows null values.
+It provides methods like add(),remove(),get(),set(),size(),contains(),isEmpty(),clear(),indexOf(),lastIndexOf(),addFirst(),addLast(),removeFirst(),removeLast()
+
+3.Vector
+-----------------
+It is a growable array.
+It implements List interface.
+It maintains insertion order.
+It allows duplicate elements.
+It allows null values.
+It provides index-based access.
+It is synchronized (thread-safe).
+It is slower than ArrayList because of synchronization.
+It provides methods like add(),remove(),get(),set(),size(),contains(),isEmpty(),clear(),indexOf(),lastIndexOf(),addElement(),removeElement(),firstElement(),lastElement(),capacity(),elementAt().
+
+Stack
+------------------------------
+It is a linear data structure that follow LIFO (Last In First Out)
+It maintains insertion Order.
+It allows duplicate element.
+It allows null value.
+It provides index based access.
+It is synchronized and thread safe.
+It provides method like push(),pop(),peek(),empty(),isEmpty(),search(),add(),remove(),size(),get(),set(),contains(),clear(),indexOf(),lastIndexOf(),capacity()
+
+set
+==================================
+HashSet
+-----------
+
+*/

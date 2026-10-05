@@ -1,3 +1,4 @@
+package basic_concept;
 class Variable{
     int a=10,b=20,res;// Instance variable
     static int defaultValue; //static variable
