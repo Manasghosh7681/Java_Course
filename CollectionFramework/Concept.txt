@@ -35,7 +35,7 @@ Collection
     |
 1.List->ArrayList,LinkedList,Stack,Vector
 2.Set->HashSet,LinkedHashSet,TreeSet
-3.Queue->PriorityQueue,DeQue,ArrayDeque
+3.Queue->PriorityQueue,Deque,ArrayDeque
 
 Deifference between Collection and Collections
 ==================================================
@@ -99,6 +99,78 @@ It provides method like push(),pop(),peek(),empty(),isEmpty(),search(),add(),rem
 set
 ==================================
 HashSet
------------
+---------------------------------
+It is a collection class that implements set interface.
+It is used to store unique elements.
+It does not allow duplicate element.
+It does not maintain insertion order.
+It allows one null value.
+It does not allow index based access.
+It provides methods like add(),addAll(),remove(),removeAll(),contains(),containsAll(),IsEmpty(),size(),clear(),iterator()
 
+LinkedHashSet
+------------------------------------
+It is a collection class that extends HashSet class.
+It is used to store uniw=que element.
+It does not allow duplicate element.
+It allows onle one null value.
+It maintain insertion order.
+It does not allow index based access.
+It provides method like add(),addAll(),remove(),removeAll(),contains(),containsAll(),clear(),isEmpty(),size(),iterator()
+
+TreeSet
+----------------------------------
+It is a collection class that implements SortedSet and NavigableSet interface.
+It is used to Store unique element.
+It does not allow duplicate value.
+It allows only one null value.
+It  maintains element ascending sorted order.
+It does not allow index based access.
+It provide method like add(),addAll(),remove(),removeAll(),contains(),containsAll(),size(),isEmpty(),clear(),iterator().
+
+Queue
+==========================================
+PriorityQueue
+------------------------------------------
+It is a collection class that implements queue interface.
+It is used to store and process the element according to the priority.
+It allows duplicate element.
+It does not allow null value.
+It maintains element in asscending order.
+It does not allow index based access.
+It does not maintain insertion order.
+It provides methods like add(),addAll(),offer(),remove(),poll(),peek(),element(),contains()containsAll(),size(),isEmpty(),clear(),iterator().
+
+Deque
+--------------------------------------
+It is a collection interface that implements ArrayDeque.
+Deque stands for double ended queue.
+It is used to add and remove element from both end.
+It allows duplicate element.
+It does not allow null value.
+It maintain insertion order.
+It does not provide index based access.
+it provide method like add(),addFirst(),addLast(),offer(),offerFirst(),offerLast(),remove(),removeFirst(),removeLast(),poll(),pollFirst(),pollLast(),peek(),peekFirst(),peekLast(),push(),pop(),contains(),size(),isEmpty(),clear(),iterator()
+
+add()/addLast()->it add an element in last.
+addFirst()/push()->add an element in first.
+offer()/offerLast()-> it add element at last and if insertion fails it return false.
+offerFirst()->add element in first.
+remove()/removeFirst()->remove an element from first.
+removeLast()->remove element from last.
+poll()/pollFirst()->Removes and return first element.
+pollLast()->it removes element from last.
+peek()/peekFirst()->It return only first element.
+peekLast()->it returns the last element.
+pop()->remove element from first.
+
+ArrayDeque
+------------------------
+It is a collection class that implements Deque Interface.
+It allows Duplicate Element.
+It does not allow null element.
+It maintain insertion order.
+It does not provide index based access.
+It provides method like add(),addFirst(),addLast(),offer(),offerFirst(),offerLast(),poll(),pollFirst(),pollLast(),peek(),peekFirst(),peekLast(),remove(),removeFirst(),removeLast(),push(),pop(),isEmpty(),
+clear(),size(),contains(),iterator().
 */
