@@ -173,4 +173,54 @@ It maintain insertion order.
 It does not provide index based access.
 It provides method like add(),addFirst(),addLast(),offer(),offerFirst(),offerLast(),poll(),pollFirst(),pollLast(),peek(),peekFirst(),peekLast(),remove(),removeFirst(),removeLast(),push(),pop(),isEmpty(),
 clear(),size(),contains(),iterator().
+
+
+/*-------------------------------------------Map----------------------------------------------*/
+Map is used to store data in key value pair.
+every key must be unique but value can be duplicate.
+Map is not a child of collection Interface.
+
+Map
+    |-HashMap
+    |-LinkedHashMap
+    |-TreeMap
+    |-Hashtable
+
+HashMap
+------------------------------------
+It is a collection class that implements map interface.
+It store element in key value pair.
+It allows only one null key and multiple null values.
+It does not maintain insertion order.
+It provides method like put(),putAll(),get(),getOrDefault(),remove(),containsKey(),containsValue(),replace(),replaceAll(),putIfAbsent(),isEmpty(),clear(),size(),keySet(),values(),entrySet(),equals(),hashCode().
+
+LinkedHashMap
+-------------------------------------------
+It is a collection class that implements Map interface.
+It store element in key value pair.
+It allows only one null key and multiple null values.
+It maintains insertion order.
+It does not provide index based access.
+It provide method like put(),putAll(),get(),getOrDefault(),remove(),containsKey(),containsValues(),replace(),replaceAll(),values(),keySet(),entrySet(),isEmpty(),size(),clear(),putIfAbsent(),equals(),hashCode()
+
+TreeMap
+--------------------------------
+It is a collection class it implements NavigableMap interface.
+It store element in key value pair.
+It does not allow null key but allow null values.
+It maintains key in sorted order.
+It sorts key in ascending order.
+It does not provide index based access.
+It allows method like put(),putAll(),get(),getOrDefault(),remove(),containsKey(),containsValue(),replace(),replaceAll(),putIfAbsent(),isEmpty(),clear(),size(),keySet(),values(),entrySet(),firstKey(),lastKey(),higherKey(),lowerKey(),ceilingKey(),floorKey(),firstEntry(),lastEntry(),pollFirstEntry(),pollLastEntry(),descendingKeySet(),descendingMap()    .
+
+Hashtable
+----------------------------
+It is a collection class that implements Map interface.
+It store element in key value pair.
+It does not allow nullkeys and does not allow null values.
+It does not maintain insertion order.
+It does not provide index based access.
+It allows duplicate values but do not allow duplicate key.
+It provide method like put(),putAll(),remove(),replace(),replaceAll(),containskey(),containsValue(),get(),getOrDefault(),putIfAbsent(),isEmpty(),clear(),size(),entrySet(),keySet(),values(),hashCode(),equals().
+
 */
